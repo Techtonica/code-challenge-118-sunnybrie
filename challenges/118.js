@@ -73,11 +73,11 @@ class ApprenticeParrot extends Parrot {
     speak(){
         this.speakCycle++;
 
-        if(this.speakCycle == 4){
-            this.speakCycle = 0;
+        if(this.speakCycle != 4){
             return "😴";
         } 
         else {
+            this.speakCycle = 0;
             return super.speak();
         };
     }
@@ -88,7 +88,7 @@ console.log(polly.speak());
 
 
 
-const me = new ApprenticeParrot("Brie");
+const me = new ApprenticeParrot("Bobby");
 console.log(me.speak());
 console.log(me.speak());
 console.log(me.speak());
